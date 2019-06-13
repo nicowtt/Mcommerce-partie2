@@ -11,8 +11,9 @@
 	<groupId>com.clientui</groupId>
 	<artifactId>clientui</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>clientui</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Client UI de l'application</description>
 
 	<properties>
 		<java.version>1.8</java.version>
