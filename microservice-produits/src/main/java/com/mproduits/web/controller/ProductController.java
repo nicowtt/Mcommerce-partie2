@@ -24,6 +24,8 @@ public class ProductController {
         List<Product> products = productDao.findAll();
 
         if(products.isEmpty()) throw new ProductNotFoundException("Aucun produit n'est disponible à la vente");
+//        if(!products.isEmpty()) throw new ProductNotFoundException("Aucun produit n'est disponible à la vente"); //pour tester l'erreur 404
+
 
         return products;
 
