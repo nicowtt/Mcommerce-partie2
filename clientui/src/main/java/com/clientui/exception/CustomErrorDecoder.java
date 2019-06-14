@@ -11,7 +11,6 @@ public class CustomErrorDecoder implements ErrorDecoder {
     public Exception decode(String methodKey, Response response) {
 
         if(response.status() == 404) {
-
             return new ProductNotFoundException("Produit non trouvé");
         }
 
