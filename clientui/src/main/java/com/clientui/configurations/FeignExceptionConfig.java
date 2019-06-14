@@ -1,6 +1,6 @@
 package com.clientui.configurations;
 
-import com.clientui.exception.CustomErrorDecoder;
+import com.clientui.exceptions.CustomErrorDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

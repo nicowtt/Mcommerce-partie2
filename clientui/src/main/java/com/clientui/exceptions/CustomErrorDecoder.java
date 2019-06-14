@@ -1,4 +1,4 @@
-package com.clientui.exception;
+package com.clientui.exceptions;
 
 import feign.Response;
 import feign.codec.ErrorDecoder;
@@ -11,9 +11,10 @@ public class CustomErrorDecoder implements ErrorDecoder {
     public Exception decode(String methodKey, Response response) {
 
         if(response.status() == 404) {
-            return new ProductNotFoundException("Produit non trouvé");
+            return new ProductBadRequestException("Produit non trouvé");
         }
 
         return defaultErrorDecoder.decode(methodKey, response);
     }
 }
+
