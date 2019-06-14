@@ -23,8 +23,10 @@
 
             <p th:text="${produit.description}"></p>
 
+            <p th:text="${produit.prix} + ' € seulement !'"></p>
+
             <p>
-                <a th:href="@{|/details-produit/commander-produit/${produit.id}|}" class="font-weight-bold">COMMANDER</a>
+                <a th:href="@{|/commander-produit/${produit.id}/${produit.prix}|}" class="font-weight-bold">COMMANDER</a>
             </p>
 
         </div>
