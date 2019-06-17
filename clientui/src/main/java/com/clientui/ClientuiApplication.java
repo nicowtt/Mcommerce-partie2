@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableFeignClients("com.clientui")
-@RibbonClient(name = "microservice-produits", configuration = LocalRibbonClientConfiguration.class)
+//@RibbonClient(name = "microservice-produits", configuration = LocalRibbonClientConfiguration.class)
+@RibbonClient(name = "zuul-server", configuration = LocalRibbonClientConfiguration.class)
 public class ClientuiApplication {
 
 	public static void main(String[] args) {

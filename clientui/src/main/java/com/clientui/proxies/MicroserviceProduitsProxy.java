@@ -12,7 +12,8 @@ import java.util.List;
 
 
 @Component //pas dans le cours
-@FeignClient(name = "microservice-produits")
+//@FeignClient(name = "microservice-produits")// avant la redirection vers l'API gate zull
+@FeignClient(name = "zuul-server")
 //@FeignClient(name = "microservice-produits", url = "localhost:9001") // avant ribbon
 //@RibbonClient(name = "microservice-produits") // remplacement par la configuration LocalRibbonClientConfiguration
 public interface MicroserviceProduitsProxy {
