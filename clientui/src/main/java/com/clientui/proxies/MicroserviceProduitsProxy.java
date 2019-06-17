@@ -2,6 +2,7 @@ package com.clientui.proxies;
 
 
 import com.clientui.beans.ProductBean;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,9 @@ import java.util.List;
 
 
 @Component //pas dans le cours
-@FeignClient(name = "microservice-produits", url = "localhost:9001")
+@FeignClient(name = "microservice-produits")
+//@FeignClient(name = "microservice-produits", url = "localhost:9001") // avant ribbon
+//@RibbonClient(name = "microservice-produits") // remplacement par la configuration LocalRibbonClientConfiguration
 public interface MicroserviceProduitsProxy {
 
     @GetMapping(value = "/Produits")
