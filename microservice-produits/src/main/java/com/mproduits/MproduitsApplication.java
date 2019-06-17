@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableConfigurationProperties// pas pour eureka
+@EnableConfigurationProperties//pour eureka
 @EnableDiscoveryClient
 public class MproduitsApplication {
 
